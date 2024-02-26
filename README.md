@@ -32,15 +32,32 @@ mvn package
 
 ## Pruebas 
 
-Para probar el funcionamiento, una vez tenga descargado el proyecto y ejecutado correctamente proceda a ingresar a un navergador, donde debera ingresar http://localhost:35000/archivoSolicitado.extension, donde las extensiones pueden ser (js, html, css, png). Los archivos a solicitar se encuentra dentro del proyecto.
+Para probar el funcionamiento, una vez tenga descargado el proyecto y ejecutado correctamente proceda a ingresar a un navegador, donde deberá ingresar http://localhost:35000/archivoSolicitado, donde las extensiones pueden ser (js, html, css, png). Tenga en cuenta que os archivos a solicitar se encuentran definidos en la clase ResourceController.
+
+
+Si desea obtener un recurso de tipo html, debe ingresar en el navegador la siguiente ruta localhost:35000/cliente
+
 
 ![recursoHttp](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/recursoHtml.png)
 
+
+Si desea obtener un recurso de tipo css, debe ingresar en el navegador la siguiente ruta localhost:35000/style.css
+
+
 ![recursoCss](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/recursoCss.png)
+
+
+Si desea obtener un recurso de tipo js, debe ingresar en el navegador la siguiente ruta localhost:35000/jsExample,js
+
 
 ![recursoJs](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/recursoJs.png)
 
+
+Si ingresa la ruta: localhost:35000/prueba, obtendrá un html cuyo resultado será
+
+
 ![prueba](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/prueba.png)
+
 ## Diseño
 
 
