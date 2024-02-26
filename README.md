@@ -34,6 +34,13 @@ mvn package
 
 Para probar el funcionamiento, una vez tenga descargado el proyecto y ejecutado correctamente proceda a ingresar a un navergador, donde debera ingresar http://localhost:35000/archivoSolicitado.extension, donde las extensiones pueden ser (js, html, css, png). Los archivos a solicitar se encuentra dentro del proyecto.
 
+![recursoHttp](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/recursoHtml.png)
+
+![recursoCss](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/recursoCss.png)
+
+![recursoJs](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/recursoJs.png)
+
+![prueba](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/prueba.png)
 ## Diseño
 
 
