@@ -24,11 +24,19 @@ acceda a la carpeta principal del proyecto mediante el siguiente comando
 cd Taller4-Arep
 ```
 
-Para empaquetar el proyecto ejecute
+Para empaquetar 
 
 ```
 mvn package
 ```
+
+Abra el proyecto en su IDE de preferencia y jecute
+
+```
+java -cp .\target\classes\ edu.escuelaing.arep.ASE.app.App
+```
+
+O ejecutelo desde su IDE 
 
 ## Pruebas 
 
