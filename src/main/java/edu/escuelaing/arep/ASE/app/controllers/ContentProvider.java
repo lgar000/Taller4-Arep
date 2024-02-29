@@ -139,7 +139,6 @@ public class ContentProvider {
   public String loadImage(String fileName) throws IOException {
       Path imagePath = Paths.get("src/main/resources/public", fileName);
       byte[] imageBytes = Files.readAllBytes(imagePath);
-      System.out.println("base 64 imagenes"+  Base64.getEncoder().encodeToString(imageBytes));
       return Base64.getEncoder().encodeToString(imageBytes);
   }
 

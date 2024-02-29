@@ -47,7 +47,6 @@ public class HttpServer {
                     if(method.isAnnotationPresent(GetMapping.class)){
                         String key = method.getAnnotation(GetMapping.class).value();
                         endpointMethods.put(key, method);
-                        System.out.println("key: " + key + " value: " + method);
                     }
                 }
             }
