@@ -79,7 +79,7 @@ y GetMapping, estas fueron definidas mediante @interface, lo que nos permite def
 
 También tenemos el componente ResourceController, que es la encargada de manejar las solicitudes para distintas rutas y devuelve contenido HTML, CSS, JS o imágenes. Cada método definido dentro de ResourceController, tiene la anotación @GetMapping, donde especificamos la ruta que manejara el método. Para apoyar la funcionalidad del componente tenemos la clase ContentProvider, que proporciona funciones para manejar la generación de respuestas HTTP y cargar contenido desde el directorio de recursos, incluyendo archivos e imágenes.
 
-Adicionalmente tenemos en el servidor se buscan  las clases que se encuentran en el paquete: edu.escuelaing.arep.ASE.app.controllers y están anotadas con @Component, y para cada una de esas clases, busca métodos anotados con @GetMapping. Luego, agrega estos métodos a un mapa (endpointMethods) donde la clave es el valor de la anotación @GetMapping (la ruta del mapeo) y el valor es el método correspondiente.
+Adicionalmente en el servidor se buscan  las clases que se encuentran en el paquete: edu.escuelaing.arep.ASE.app.controllers y están anotadas con @Component, y para cada una de esas clases, busca métodos anotados con @GetMapping. Luego, agrega estos métodos a un mapa (endpointMethods) donde la clave es el valor de la anotación @GetMapping (la ruta del mapeo) y el valor es el método correspondiente.
 
 ## Construido Con
 
