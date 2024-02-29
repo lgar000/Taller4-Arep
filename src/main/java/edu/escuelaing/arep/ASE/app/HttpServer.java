@@ -82,6 +82,7 @@ public class HttpServer {
             String uriStr = "";
             String method="";
             String path;
+            outputStream= clientSocket.getOutputStream();
             while ((inputLine = in.readLine()) != null) {
                 if (firstLine) {
                     uriStr = inputLine.split(" ")[1];
@@ -193,21 +194,19 @@ public class HttpServer {
     }
 
     /**
-     * metodo que busca los diferentes archivos .class en base a una ruta de un posible
-     * directorio, asegurandose que este lo sea, una vez encuentra los archivos .class
-     * los concatena con el path suministrado y los agrega a un set que sera retornado
-     * @param raiz path de la carpeta que se desea analizar
-     * @return set de todas las clases en un directorio especifico
+     * Obtiene las clases de un paquete
+     * @param root El paquete raíz del que se quieren obtener las clases.
+     * @return conjunto de objetos Class del paquete
      */
-    private static Set<Class<?>> getClasses(String raiz){
+    private static Set<Class<?>> getClasses(String root){
         Set<Class<?>> classes = new HashSet<>();
-        String path = raiz.replace(".", "/");
+        String path = root.replace(".", "/");
         try{
             File file = new File(getClassPaths() + "/" + path);
             if(file.exists() && file.isDirectory()){
                 for(File classFile : file.listFiles()){
                     if(classFile.isFile() && classFile.getName().endsWith(".class")){
-                        String className = raiz + "." + classFile.getName().replace(".class", "");
+                        String className = root + "." + classFile.getName().replace(".class", "");
                         Class<?> clazz = Class.forName(className);
                         classes.add(clazz);
                     }
@@ -221,8 +220,8 @@ public class HttpServer {
 
 
     /**
-     * metodo que busca la ubicacion de la carpeta target
-     * @return path de la carpeta target
+     * Obtiene la ruta del directorio raíz
+     * @return cadena que representa la ruta del directorio raíz
      */
     private static String getClassPaths() {
         String classPath = System.getProperty("java.class.path");
