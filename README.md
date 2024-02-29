@@ -58,9 +58,28 @@ Si ingresa la ruta: localhost:35000/prueba, obtendrá un html cuyo resultado ser
 
 ![prueba](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/prueba.png)
 
+Puede obtener imagenes mediante las siguientes rutas:
+
+localhost:35000/icon
+
+![icon](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/icon.png)
+
+localhost:35000/chocolateDomeCake
+
+![prueba](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/chocolateDomeCake.png)
+
+Además puede obtener páginas que contengan imagenes y estilo en la ruta: localhost:35000/page
+
+![page](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/page.png)
+
 ## Diseño
 
+Tenemos un servidor que responde solicitudes de tipo GET para páginas html, js, css e imágenes de tipo png. Además, el servidor debe proporcionar un framework IoC para la construcción de aplicaciones web a partir de POJOS. Para lograrlo tenemos la carpeta annotations, que contiene las anotaciones Component
+y GetMapping, estas fueron definidas mediante @interface, lo que nos permite definir anotaciones personalizadas.  En component tenemos las siguientes anotaciones: @Retention(RetentionPolicy.RUNTIME), significa que Component estará disponible durante el tiempo de ejecución y permitirá inspeccionar las clases y métodos anotados durante la ejecución del programa. También tiene @Target(ElementType.TYPE), nos indica que se puede aplicar a clases, interfaces y otras anotaciones. Esta se utiliza para marcar clases como componentes. Por otro lado tenemos a GetMapping, en el que se define String value(), que se usa para especificar la ruta asociada a un método.
 
+También tenemos el componente ResourceController, que es la encargada de manejar las solicitudes para distintas rutas y devuelve contenido HTML, CSS, JS o imágenes. Cada método definido dentro de ResourceController, tiene la anotación @GetMapping, donde especificamos la ruta que manejara el método. Para apoyar la funcionalidad del componente tenemos la clase ContentProvider, que proporciona funciones para manejar la generación de respuestas HTTP y cargar contenido desde el directorio de recursos, incluyendo archivos e imágenes.
+
+Adicionalmente tenemos en el servidor se buscan  las clases que se encuentran en el paquete: edu.escuelaing.arep.ASE.app.controllers y están anotadas con @Component, y para cada una de esas clases, busca métodos anotados con @GetMapping. Luego, agrega estos métodos a un mapa (endpointMethods) donde la clave es el valor de la anotación @GetMapping (la ruta del mapeo) y el valor es el método correspondiente.
 
 ## Construido Con
 
