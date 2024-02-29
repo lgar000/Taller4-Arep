@@ -36,7 +36,9 @@ Abra el proyecto en su IDE de preferencia y jecute
 java -cp .\target\classes\ edu.escuelaing.arep.ASE.app.App
 ```
 
-O ejecutelo desde su IDE 
+O ejecutelo desde su IDE
+
+![ejecutar](https://github.com/lgar000/Taller4-Arep/blob/main/Imagenes/ejecutar.png)
 
 ## Pruebas 
 
